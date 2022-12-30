@@ -19,7 +19,7 @@ enum InitScannerError: Error {
 
 public typealias StateChangeCallback = (_ state: ScanState) -> ()
 
-class `Scanner`: StreamHolder {
+open class `Scanner`: StreamHolder {
     
     public typealias CallBack = (Bool, Error?) -> ()
     
