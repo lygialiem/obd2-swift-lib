@@ -21,7 +21,7 @@ public typealias StateChangeCallback = (_ state: ScanState) -> ()
 
 class `Scanner`: StreamHolder {
     
-    typealias CallBack = (Bool, Error?) -> ()
+    public typealias CallBack = (Bool, Error?) -> ()
     
     
     var defaultSensors: [UInt8] = [0x0C, 0x0D]

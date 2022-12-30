@@ -20,7 +20,7 @@ open class OBD2 {
     private(set) var host : String
     private(set) var port : Int
     
-    private var scanner : Scanner
+    open var scanner : Scanner
     
     public var stateChanged: StateChangeCallback? {
         didSet {

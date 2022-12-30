@@ -18,8 +18,8 @@ class StreamHolder: NSObject {
     
     var delegate : StreamFlowDelegate?
     
-    var inputStream : InputStream!
-    var outputStream : OutputStream!
+    open var inputStream : InputStream!
+    open var outputStream : OutputStream!
     
     let obdQueue: OperationQueue = {
         let queue = OperationQueue()
