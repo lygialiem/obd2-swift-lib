@@ -14,7 +14,7 @@ protocol StreamFlowDelegate {
     func hasInput(on stream : Stream)
 }
 
-class StreamHolder: NSObject {
+open class StreamHolder: NSObject {
     
     var delegate : StreamFlowDelegate?
     
@@ -48,8 +48,8 @@ class StreamHolder: NSObject {
         self.inputStream.delegate = nil
         self.outputStream.delegate = nil
         
-        self.inputStream.remove(from: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
-        self.outputStream.remove(from: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+        self.inputStream.remove(from: RunLoop.current, forMode: .default)
+        self.outputStream.remove(from: RunLoop.current, forMode: .default)
         
         self.inputStream.close()
         self.outputStream.close()
